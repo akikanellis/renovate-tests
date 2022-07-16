@@ -20,7 +20,7 @@
   username: "aki-bot[bot]",
   gitAuthor: "aki-bot <103840025+aki-bot[bot]@users.noreply.github.com>",
   platform: "github",
-  repositories: ["akikanellis/github-action-continuous-release-test"],
+  repositories: ["akikanellis/renovate-tests"],
   branchPrefix: "update-dependencies-",
   onboarding: false,
   requireConfig: false,
