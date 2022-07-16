@@ -1,0 +1,39 @@
+---
+name: Update Dependencies
+
+"on":
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  update-dependencies:
+    name: Update dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
+
+      - name: Get token
+        id: get-token
+        # yamllint disable-line rule:line-length
+        uses: peter-murray/workflow-application-token-action@e8782d687a306fb13d733244d0f2a50e272d3752 # tag=v1.4.0
+        with:
+          application_id: ${{ secrets.AKI_BOT_APP_ID }}
+          application_private_key: ${{ secrets.AKI_BOT_APP_PRIVATE_KEY }}
+          permissions: >
+            contents:write,
+            issues:write,
+            pull_requests:write,
+            workflows:write
+
+      - name: Update dependencies
+        # yamllint disable-line rule:line-length
+        uses: renovatebot/github-action@8ebea087a8b2fa820d7edb7c2fa33dfba0bb872d # tag=v32.117.1
+        with:
+          configurationFile: renovate.json5
+          token: x-access-token:${{ steps.get-token.outputs.token }}
+        env:
+          LOG: DEBUG
