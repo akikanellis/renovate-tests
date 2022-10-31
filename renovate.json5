@@ -26,7 +26,7 @@
   platformAutomerge: true,
   rollbackPrs: true,
   "docker-compose": {
-    fileMatch: ["(^|/)(?:docker-)?compose[^/]*\.ya?ml\.j2$"]
+    fileMatch: ["(^|/)(?:docker-)?compose[^/]*.ya?ml.j2$"]
   },
   regexManagers: [
     {
