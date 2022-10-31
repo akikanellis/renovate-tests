@@ -41,3 +41,33 @@ services:
     environment:
       AUTOHEAL_CONTAINER_LABEL: all
     restart: always
+
+  pihole:
+    image: pihole/pihole:v5.8.1
+    hostname: dns-primary.domantaki.com
+    environment:
+      TZ: {{ timezone }}
+      WEBPASSWORD: {{ pihole_password }}
+    volumes:
+      - {{ volumes_directory }}/pihole/etc-dnsmasq.d:/etc/dnsmasq.d
+      - {{ volumes_directory }}/pihole/etc-pihole:/etc/pihole
+    ports:
+      - "53:53"
+      - "53:53/udp"
+      - "80:80"
+      - "443:443"
+    dns:
+      - 127.0.0.1
+      - 8.8.8.8
+    restart: always
+
+  portainer:
+    image: portainer/portainer-ce:2.11.0
+    volumes:
+      - {{ volumes_directory }}/portainer:/data
+
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+    restart: always

@@ -25,6 +25,9 @@
   requireConfig: false,
   platformAutomerge: true,
   rollbackPrs: true,
+  "docker-compose": {
+    fileMatch: ["(^|/)(?:docker-)?compose[^/]*\.ya?ml\.j2$"]
+  },
   regexManagers: [
     {
       description: "Any other file with dependencies",
