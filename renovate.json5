@@ -5,7 +5,6 @@
 
     ":automergeDigest",
     ":automergeMinor",
-    ":maintainLockFilesWeekly",
     ":semanticCommitType(build)",
     ":semanticCommitTypeAll(build)",
 
@@ -20,7 +19,7 @@
   username: "aki-bot[bot]",
   gitAuthor: "aki-bot <103840025+aki-bot[bot]@users.noreply.github.com>",
   platform: "github",
-  repositories: ["akikanellis/renovate-tests"],
+  repositories: ["akikanellis/homelab"],
   branchPrefix: "update-dependencies-",
   onboarding: false,
   requireConfig: false,
