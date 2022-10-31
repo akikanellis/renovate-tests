@@ -22,7 +22,7 @@
   repositories: ["akikanellis/renovate-tests"],
   branchPrefix: "update-dependencies-",
   onboarding: false,
-  requireConfig: false,
+  requireConfig: "required",
   platformAutomerge: true,
   rollbackPrs: true,
   "docker-compose": {
