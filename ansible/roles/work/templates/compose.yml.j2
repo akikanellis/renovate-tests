@@ -2,72 +2,10 @@
 name: monitoring
 
 services:
-  netdata:
-    image: netdata/netdata:v1.32.1
-    hostname: netdata-server-pi.domantaki.com
-    environment:
-      DOCKER_HOST: docker-socket-proxy:2375
-    volumes:
-      - "{{ volumes_directory }}"/netdata:/etc/netdata:ro
-
-      - /etc/group:/host/etc/group:ro
-      - /etc/passwd:/host/etc/passwd:ro
-      - /etc/os-release:/host/etc/os-release:ro
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-    ports:
-      - "19999:19999"
-    security_opt:
-      - apparmor:unconfined
-    cap_add:
-      - SYS_PTRACE
-    restart: always
-
-  docker-socket-proxy:
-    # Unfortunately this image does not provide versions other than `latest`
-    image: ghcr.io/tecnativa/docker-socket-proxy:latest
-    environment:
-      CONTAINERS: 1
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    ports:
-      - "2375:2375"
-    restart: always
-
   autoheal:
     image: willfarrell/autoheal:1.2.0
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       AUTOHEAL_CONTAINER_LABEL: all
-    restart: always
-
-  pihole:
-    image: pihole/pihole:v5.8.1
-    hostname: dns-primary.domantaki.com
-    environment:
-      TZ: "{{ timezone }}"
-      WEBPASSWORD: "{{ pihole_password }}"
-    volumes:
-      - "{{ volumes_directory }}"/pihole/etc-dnsmasq.d:/etc/dnsmasq.d
-      - "{{ volumes_directory }}"/pihole/etc-pihole:/etc/pihole
-    ports:
-      - "53:53"
-      - "53:53/udp"
-      - "80:80"
-      - "443:443"
-    dns:
-      - 127.0.0.1
-      - 8.8.8.8
-    restart: always
-
-  portainer:
-    image: portainer/portainer-ce:2.11.0
-    volumes:
-      - "{{ volumes_directory }}"/portainer:/data
-
-      - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - "8000:8000"
-      - "9000:9000"
     restart: always
