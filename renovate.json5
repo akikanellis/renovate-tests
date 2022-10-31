@@ -26,7 +26,7 @@
   platformAutomerge: true,
   rollbackPrs: true,
   "docker-compose": {
-    fileMatch: ["(^|/)(?:docker-)?compose[^/]*.ya?ml.j2$"]
+    fileMatch: ["(^|/)(?:docker-)?compose[^/]*\.ya?ml\.j2$"]
   },
   regexManagers: [
     {
@@ -34,9 +34,9 @@
       fileMatch: [
         /* eslint-disable jsonc/no-useless-escape */
         "(^|/)justfile$",
-        "(^workflow-templates|\.github\/workflows)\/[^/]+\.ya?ml$",
-        "(^|\/)action\.ya?ml$",
-        "^ansible\/.*vars\/[^/]+.ya?ml$"
+        "(^workflow-templates|\.github/workflows)/[^/]+\.ya?ml$",
+        "(^|/)action\.ya?ml$",
+        "^ansible/.*vars/[^/]+\.ya?ml$"
         /* eslint-enable jsonc/no-useless-escape */
       ],
       matchStrings: [
