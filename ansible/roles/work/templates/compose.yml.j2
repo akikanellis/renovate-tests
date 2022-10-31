@@ -8,7 +8,7 @@ services:
     environment:
       DOCKER_HOST: docker-socket-proxy:2375
     volumes:
-      - {{ volumes_directory }}/netdata:/etc/netdata:ro
+      - "{{ volumes_directory }}"/netdata:/etc/netdata:ro
 
       - /etc/group:/host/etc/group:ro
       - /etc/passwd:/host/etc/passwd:ro
@@ -46,11 +46,11 @@ services:
     image: pihole/pihole:v5.8.1
     hostname: dns-primary.domantaki.com
     environment:
-      TZ: {{ timezone }}
-      WEBPASSWORD: {{ pihole_password }}
+      TZ: "{{ timezone }}"
+      WEBPASSWORD: "{{ pihole_password }}"
     volumes:
-      - {{ volumes_directory }}/pihole/etc-dnsmasq.d:/etc/dnsmasq.d
-      - {{ volumes_directory }}/pihole/etc-pihole:/etc/pihole
+      - "{{ volumes_directory }}"/pihole/etc-dnsmasq.d:/etc/dnsmasq.d
+      - "{{ volumes_directory }}"/pihole/etc-pihole:/etc/pihole
     ports:
       - "53:53"
       - "53:53/udp"
@@ -64,7 +64,7 @@ services:
   portainer:
     image: portainer/portainer-ce:2.11.0
     volumes:
-      - {{ volumes_directory }}/portainer:/data
+      - "{{ volumes_directory }}"/portainer:/data
 
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
