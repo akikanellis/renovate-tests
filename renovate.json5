@@ -25,9 +25,6 @@
   requireConfig: "required",
   platformAutomerge: true,
   rollbackPrs: true,
-  "docker-compose": {
-    fileMatch: ["(^|/)(?:docker-)?compose[^/]*\.ya?ml\.j2$"]
-  },
   regexManagers: [
     {
       description: "Any other file with dependencies",
@@ -69,5 +66,9 @@ v?\
 (\\.(?<minor>\\d+))?\
 (\\.(?<patch>\\d+))?$"
     }
-  ]
+  ],
+  "docker-compose": {
+    // eslint-disable-next-line jsonc/no-useless-escape
+    fileMatch: ["(^|/)(?:docker-)?compose[^/]*\.ya?ml\.j2$"]
+  }
 }
