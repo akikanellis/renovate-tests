@@ -6,7 +6,7 @@ name: Write File
 
 jobs:
   write-file:
-    name: Update dependencies
+    name: Write file
     runs-on: self-hosted
 
     steps:
