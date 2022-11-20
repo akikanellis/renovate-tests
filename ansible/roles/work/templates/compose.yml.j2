@@ -12,7 +12,7 @@ services:
 
   docker-socket-proxy:
     # Unfortunately this image does not provide versions other than `latest`
-    image: ghcr.io/tecnativa/docker-socket-proxy:latest # editorconfig-checker-disable-line
+    image: ghcr.io/tecnativa/docker-socket-proxy:latest@sha256:6c22b9545adc95258af9deffdde6c0ce0a0a70716771e5a4e02d24d1b6e0dda1 # editorconfig-checker-disable-line
     environment:
       CONTAINERS: 1
     volumes:
@@ -22,7 +22,7 @@ services:
     restart: always
 
   portainer:
-    image: portainer/portainer-ce:2.15.0 # editorconfig-checker-disable-line
+    image: portainer/portainer-ce:2.15.0@sha256:444ade51d69d7fca889c7aa14525c459dba313a0e7ca79aee985e6c0749427de # editorconfig-checker-disable-line
     volumes:
       - "{{ volumes_directory }}/portainer:/data"
 
