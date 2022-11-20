@@ -69,4 +69,4 @@ jobs:
         uses: hmarr/auto-approve-action@de8ae18c173c131e182d4adf2c874d8d2308a85b # tag=v3.1.0
         if: github.actor == 'akikanellis' || github.actor == 'aki-bot[bot]'
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.AKI_APPROVE_PRS_TOKEN }}
