@@ -23,6 +23,7 @@
   branchPrefix: "update-dependencies-",
   onboarding: false,
   requireConfig: "required",
+  automerge: true,
   platformAutomerge: true,
   rollbackPrs: true,
   regexManagers: [
@@ -55,6 +56,11 @@ semver\
     }
   ],
   packageRules: [
+    {
+      "description": "Block automerge for major updates",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
     {
       matchDatasources: ["docker"],
       matchPackageNames: ["github/super-linter"],
