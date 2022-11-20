@@ -1,7 +1,7 @@
 ---
 services:
   netdata:
-    image: netdata/netdata:v1.36.1 # editorconfig-checker-disable-line
+    image: netdata/netdata:v1.36.1@sha256:a9c803191570d6f28f7e872673ee55f69dbfa7a17c3f99cb7c46ed799088ead0 # editorconfig-checker-disable-line
     hostname: "netdata-{{ inventory_hostname }}"
     environment:
       DOCKER_HOST: docker-socket-proxy:2375
@@ -22,7 +22,7 @@ services:
     restart: always
 
   docker-socket-proxy:
-    image: ghcr.io/tecnativa/docker-socket-proxy:0.1.1 # editorconfig-checker-disable-line
+    image: ghcr.io/tecnativa/docker-socket-proxy:0.1.1@sha256:6c22b9545adc95258af9deffdde6c0ce0a0a70716771e5a4e02d24d1b6e0dda1 # editorconfig-checker-disable-line
     environment:
       CONTAINERS: 1
       TZ: "{{ timezone }}"
@@ -33,7 +33,7 @@ services:
     restart: always
 
   prometheus:
-    image: prom/prometheus:v2.40.2 # editorconfig-checker-disable-line
+    image: prom/prometheus:v2.40.2@sha256:08dde1767993e5fee7539ec3d3462aded997981691a4d3c0cfe567beef89e5b5 # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
@@ -45,7 +45,7 @@ services:
     restart: always
 
   unpoller:
-    image: ghcr.io/unpoller/unpoller:v2.1.9 # editorconfig-checker-disable-line
+    image: ghcr.io/unpoller/unpoller:v2.1.9@sha256:2e81595ce317982044c185afe368a71d8d619de3296160605666667f0424648a # editorconfig-checker-disable-line
     #user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
@@ -56,7 +56,7 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana-oss:9.2.5 # editorconfig-checker-disable-line
+    image: grafana/grafana-oss:9.2.5@sha256:4b2606fb9abcf3af41b7409656dd5a7bf28d093b23c26603623ee09c79454afd # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       GF_INSTALL_PLUGINS: >
@@ -70,7 +70,7 @@ services:
     restart: always
 
   graylog:
-    image: graylog/graylog:4.3.9 # editorconfig-checker-disable-line
+    image: graylog/graylog:4.3.9@sha256:d7ab5275d8124e5c0706a86a3f8f7b4c00085fc9cd90423cae911ba3c8d55c9f # editorconfig-checker-disable-line
     environment:
       TZ: "{{ timezone }}"
     volumes:
@@ -95,7 +95,7 @@ services:
     restart: always
 
   mongodb:
-    image: mongo:4.4.18 # editorconfig-checker-disable-line
+    image: mongo:4.4.18@sha256:ca10c7c235f7b56826ed10a57b5246b482d8e19e19d8521831fc26693602a75e # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
@@ -104,7 +104,7 @@ services:
     restart: always
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.2 # editorconfig-checker-disable-line
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.2@sha256:2c257b68f361872e13bdd476cba152e232a314ec61b0eedfc1f71b628ba39432 # editorconfig-checker-disable-line
     environment:
       http.host: 0.0.0.0
       network.host: 0.0.0.0
@@ -115,7 +115,7 @@ services:
     restart: always
 
   autoheal:
-    image: willfarrell/autoheal:1.2.0 # editorconfig-checker-disable-line
+    image: willfarrell/autoheal:1.2.0@sha256:31f580ef0279eaced5b38d631b08c474d70d8403c1c2fdd6ddcf2e879d5f3f7c # editorconfig-checker-disable-line
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
