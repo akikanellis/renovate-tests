@@ -59,15 +59,20 @@ jobs:
               "chore": "chore"
             }
 
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show context
+        run: echo "$GITHUB_CONTEXT"
+
   approve-pr:
     name: Approve PR
     runs-on: ubuntu-latest
     if: github.actor == 'AkiKanellis' || github.actor == 'aki-bot[bot]'
 
     steps:
-      - name: Show context
-        run: echo "$GITHUB_CONTEXT"
-
       - name: Get token
         id: get-token
         run: |
