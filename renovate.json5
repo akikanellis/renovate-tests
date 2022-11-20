@@ -73,11 +73,14 @@ v?\
 (\\.(?<patch>\\d+))?$"
     },
     {
-      description: "Block major updates for mongo",
+      description: "Limit mongo versions to 4.x.x.\
+      Mongo version 5.0.0 introduced a minimum architecture which makes it\
+      incompatible with the current architecture of `server-nas`\
+      See:\
+      https://www.mongodb.com/docs/manual/release-notes/5.0/#platform-support",
       matchDatasources: ["docker"],
       matchPackageNames: ["mongo"],
-      matchUpdateTypes: ["major"],
-      enabled: false
+      allowedVersions: "<= 4"
     }
   ],
   "docker-compose": {
