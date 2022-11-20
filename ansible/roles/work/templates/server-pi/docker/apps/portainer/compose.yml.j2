@@ -1,0 +1,16 @@
+---
+name: portainer
+
+services:
+  portainer:
+    image: portainer/portainer-ce:2.16.1@sha256:4bbfaf39eff84e9d2a84c988918fceaa6910a8c5095acf124a328a74b7cc1d6e # editorconfig-checker-disable-line
+    environment:
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ volumes_directory }}/portainer:/data"
+
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+    restart: always
