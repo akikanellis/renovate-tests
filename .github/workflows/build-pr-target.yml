@@ -71,11 +71,7 @@ jobs:
         with:
           application_id: ${{ secrets.AKI_APPROVE_BOT_APP_ID }}
           application_private_key: ${{ secrets.AKI_APPROVE_BOT_APP_PRIVATE_KEY }}
-          permissions: >
-            contents:write,
-            issues:write,
-            pull_requests:write,
-            workflows:write
+          permissions: pull_requests:write
 
       - name: Approve PR
         # yamllint disable-line rule:line-length
