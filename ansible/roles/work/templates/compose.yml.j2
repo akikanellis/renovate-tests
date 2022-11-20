@@ -31,3 +31,12 @@ services:
       - "8000:8000"
       - "9000:9000"
     restart: always
+
+  mongodb:
+    image: mongo:4.4.16 # editorconfig-checker-disable-line
+    user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
+    environment:
+      TZ: "{{ timezone }}"
+    volumes:
+      - "{{ volumes_directory }}/mongodb/db:/data/db"
+    restart: always

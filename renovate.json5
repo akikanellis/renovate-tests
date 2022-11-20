@@ -65,6 +65,13 @@ v?\
 (?<major>\\d+)\
 (\\.(?<minor>\\d+))?\
 (\\.(?<patch>\\d+))?$"
+    },
+    {
+      description: "Block major updates for mongo",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["mongo"],
+      matchUpdateTypes: ["major"],
+      enabled: false
     }
   ],
   "docker-compose": {
