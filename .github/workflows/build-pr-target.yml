@@ -62,7 +62,7 @@ jobs:
   approve-pr:
     name: Approve PR
     runs-on: ubuntu-latest
-    if: github.actor == "AkiKanellis" || github.actor == "aki-bot[bot]"
+    if: github.actor == 'AkiKanellis' || github.actor == 'aki-bot[bot]'
 
     steps:
       - name: Get token
