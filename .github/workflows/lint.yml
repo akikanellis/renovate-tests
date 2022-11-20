@@ -1,0 +1,29 @@
+---
+name: Lint
+
+"on":
+  workflow_call:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3.1.0
+        with:
+          fetch-depth: 0
+
+      - name: Lint
+        # yamllint disable-line rule:line-length
+        uses: github/super-linter/slim@bb2d833b08b6c288608686672b93a8a4589cdc49 # tag=v4.9.7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BRANCH: main
+          VALIDATE_ALL_CODEBASE: false
+          IGNORE_GENERATED_FILES: true
+          IGNORE_GITIGNORED_FILES: true
+          YAML_ERROR_ON_WARNING: true
+          FILTER_REGEX_EXCLUDE: .*vault\.yml
