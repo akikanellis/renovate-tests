@@ -65,7 +65,7 @@ jobs:
 
     steps:
       - name: Show context
-        run: echo "$GITHUB_CONTEXT"
+        run: echo '${{ toJSON(github) }}'
 
   approve-pr:
     name: Approve PR
