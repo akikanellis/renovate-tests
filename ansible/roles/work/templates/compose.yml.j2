@@ -3,7 +3,7 @@ name: monitoring
 
 services:
   autoheal:
-    image: willfarrell/autoheal:1.2.0 # editorconfig-checker-disable-line
+    image: willfarrell/autoheal:1.2.0@sha256:31f580ef0279eaced5b38d631b08c474d70d8403c1c2fdd6ddcf2e879d5f3f7c # editorconfig-checker-disable-line
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
@@ -12,7 +12,7 @@ services:
 
   docker-socket-proxy:
     # Unfortunately this image does not provide versions other than `latest`
-    image: ghcr.io/tecnativa/docker-socket-proxy:latest # editorconfig-checker-disable-line
+    image: ghcr.io/tecnativa/docker-socket-proxy:latest@sha256:6c22b9545adc95258af9deffdde6c0ce0a0a70716771e5a4e02d24d1b6e0dda1 # editorconfig-checker-disable-line
     environment:
       CONTAINERS: 1
     volumes:
@@ -22,7 +22,7 @@ services:
     restart: always
 
   portainer:
-    image: portainer/portainer-ce:2.15.0 # editorconfig-checker-disable-line
+    image: portainer/portainer-ce:2.15.0@sha256:444ade51d69d7fca889c7aa14525c459dba313a0e7ca79aee985e6c0749427de # editorconfig-checker-disable-line
     volumes:
       - "{{ volumes_directory }}/portainer:/data"
 
@@ -33,7 +33,7 @@ services:
     restart: always
 
   mongodb:
-    image: mongo:3.0.0 # editorconfig-checker-disable-line
+    image: mongo:3.0.0@sha256:79ef21c9d1432f037cda51d885e09a273daecad717a672f8a0d60f69ce9ce943 # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
