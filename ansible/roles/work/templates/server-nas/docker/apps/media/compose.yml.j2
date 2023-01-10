@@ -56,7 +56,7 @@ services:
     restart: always
 
   prowlarr:
-    image: lscr.io/linuxserver/prowlarr:0.4.9-develop@sha256:3a8c10eb945f1fc46318c086f34c94ab69a7da6e99ee443e5e206348044c51d2 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/prowlarr:0.4.9-develop@sha256:6e82c64042c74ffacd7649975f9f8bf81d9d8e75841fe5b1d8f2117baa33b77f # editorconfig-checker-disable-line
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
       PGID: "{{ ansible_manager_user_gid }}"
