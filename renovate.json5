@@ -22,6 +22,7 @@
   automerge: true,
   platformAutomerge: true,
   rollbackPrs: true,
+  prHourlyLimit: 50,
   regexManagers: [
     {
       description: "Any other file with dependencies",
