@@ -1,0 +1,35 @@
+name: Workflow to simulate renovate updates
+
+jobs:
+  stub:
+    name: Stub
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Action with major.minor.patch
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+
+      - name: Action with major.minor
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1
+
+      - name: Action with major
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3
+
+      - name: Action that uses java version
+        # yamllint disable-line rule:line-length
+        uses: actions/setup-java@1df8dbefe2a8cbc99770194893dd902763bee34b # v3.9.0
+        with:
+          distribution: temurin
+          # renovate: datasource=adoptium-java depName=java
+          java-version: 17.0.5+8
+
+      - name: Action that uses python version
+        # yamllint disable-line rule:line-length
+        uses: actions/setup-python@5ccb29d8773c3f3f653e1705f474dfaa8a06a912 # v4.4.0
+        with:
+          # renovate: datasource=docker depName=python versioning=docker
+          python-version: 3.11.1
+          cache: pip
