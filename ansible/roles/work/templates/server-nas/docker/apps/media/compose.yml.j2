@@ -73,7 +73,7 @@ services:
     restart: always
 
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:4.4.5@sha256:ec8f9cf97d0b847a2434dc35d7839040faacfbcaf9f71ba92e7fcbfd7a851de7 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/qbittorrent:4.4.5@sha256:dc56b7a8cd0e2ac4eeb05eff5ef57702e432142a5422c03cc24865b843d03962 # editorconfig-checker-disable-line
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
       PGID: "{{ ansible_manager_user_gid }}"
