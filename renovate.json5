@@ -3,8 +3,6 @@
   extends: [
     "config:base",
 
-    ":automergeDigest",
-    ":automergeMinor",
     ":semanticCommitType(build)",
     ":semanticCommitTypeAll(build)",
 
@@ -12,9 +10,7 @@
 
     "group:allNonMajor",
 
-    "helpers:pinGitHubActionDigests",
-
-    "schedule:weekends"
+    "helpers:pinGitHubActionDigests"
   ],
   username: "aki-bot[bot]",
   gitAuthor: "aki-bot <103840025+aki-bot[bot]@users.noreply.github.com>",
@@ -32,6 +28,7 @@
       fileMatch: [
         /* eslint-disable jsonc/no-useless-escape */
         "(^|/)justfile$",
+        "(^|/)gradle\.properties$",
         "(^workflow-templates|\.github/workflows)/[^/]+\.ya?ml$",
         "(^|/)action\.ya?ml$",
         "^ansible/.*vars/[^/]+\.ya?ml$"
@@ -53,15 +50,28 @@
 {{else}}\
 semver\
 {{/if}}"
+    },
+    {
+      description: "Update Java in .tool-versions.\
+      The asdf manager for renovate does not currently support the temurin\
+      distribution.\
+      See:\
+        * https://github.com/renovatebot/renovate/issues/19183\
+        * https://github.com/renovatebot/renovate/issues/19184",
+      fileMatch: ["(^|/)\.tool-versions$"],
+      matchStrings: ["^java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
+      datasourceTemplate: "adoptium-java",
+      depNameTemplate: "java"
     }
   ],
   packageRules: [
     {
-      "description": "Block automerge for major updates",
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      description: "Block automerge for major updates",
+      matchUpdateTypes: ["major"],
+      automerge: false
     },
     {
+      description: "Use correct compatibility for github/super-linter",
       matchDatasources: ["docker"],
       matchPackageNames: ["github/super-linter"],
       versioning: "\
@@ -74,7 +84,7 @@ v?\
     },
     {
       description: "Limit lscr.io/linuxserver/heimdall versions to 2020.x.x.\
-      Heimdall has a single 2021.x.x version which interferes with the normal\
+      There is a single 2021.x.x version which interferes with the normal\
       versions it exposes causing older versions being pulled in as if they are\
       newer",
       matchDatasources: ["docker"],
@@ -83,7 +93,7 @@ v?\
     },
     {
       description: "Limit lscr.io/linuxserver/qbittorrent versions to 13.x.x.\
-      Qbittorrent versioning changed from version 14.x.x - 20.x.x causing older\
+      The versioning changed from version 14.x.x - 20.x.x causing older\
       versions being pulled in as if they are newer",
       matchDatasources: ["docker"],
       matchPackageNames: ["lscr.io/linuxserver/qbittorrent"],
@@ -91,8 +101,8 @@ v?\
     },
     {
       description: "Limit mongo versions to 4.x.x.\
-      Mongo version 5.0.0 introduced a minimum architecture which makes it\
-      incompatible with the current architecture of `server-nas`\
+      Version 5.0.0 introduced a minimum architecture which makes it\
+      incompatible with the current architecture of `server-nas`.\
       See:\
       https://www.mongodb.com/docs/manual/release-notes/5.0/#platform-support",
       matchDatasources: ["docker"],
