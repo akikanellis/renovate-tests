@@ -33,7 +33,7 @@ services:
     restart: always
 
   plex:
-    image: lscr.io/linuxserver/plex:1.29.2@sha256:6fb82652cf98bf05b57bb065aafab79d3bce00bae9d7e54d54d60c7a59d3fb44 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/plex:1.30.0@sha256:fa27fb0841e1bd75310317dc1812599fa29d3662464eed51fd766e9ed4060362 # editorconfig-checker-disable-line
     network_mode: host
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
@@ -56,7 +56,7 @@ services:
     restart: always
 
   prowlarr:
-    image: lscr.io/linuxserver/prowlarr:0.4.9-develop@sha256:6e82c64042c74ffacd7649975f9f8bf81d9d8e75841fe5b1d8f2117baa33b77f # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/prowlarr:0.4.11-develop@sha256:fc6f27bd2119f42169882331c4d840da3ec8fd33d029b27631913c006ada8c16 # editorconfig-checker-disable-line
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
       PGID: "{{ ansible_manager_user_gid }}"
@@ -73,7 +73,7 @@ services:
     restart: always
 
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:4.4.5@sha256:dc56b7a8cd0e2ac4eeb05eff5ef57702e432142a5422c03cc24865b843d03962 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/qbittorrent:4.5.0@sha256:5fbbf642e467c558e291851c8abbc85cb497bf302ce8e36d551ffc16cb631c13 # editorconfig-checker-disable-line
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
       PGID: "{{ ansible_manager_user_gid }}"
@@ -92,7 +92,7 @@ services:
     restart: always
 
   radarr:
-    image: lscr.io/linuxserver/radarr:4.2.4@sha256:2f7a7b7a0ca67fdae1ba79cce4c8927d46a92ab2c50a5261b4524691bc3f959d # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/radarr:4.3.2@sha256:0bd872c0f5c2ff7a5a89f3d1d85459ab5489674e8c1e7817484d26fb45d9ca02 # editorconfig-checker-disable-line
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
       PGID: "{{ ansible_manager_user_gid }}"
@@ -111,7 +111,7 @@ services:
     restart: always
 
   sabnzbd:
-    image: lscr.io/linuxserver/sabnzbd:3.7.0@sha256:7848728fe9e5194d17b82fca566df0ecacb811ac07f38469e719a4cfa9e3f370 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/sabnzbd:3.7.1@sha256:be8f629d16b3149a1fab3d0b4e53cc3afbd4f657b2ee67af994ebbd2442b8aad # editorconfig-checker-disable-line
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
       PGID: "{{ ansible_manager_user_gid }}"

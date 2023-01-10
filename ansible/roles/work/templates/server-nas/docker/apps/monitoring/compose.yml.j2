@@ -1,7 +1,7 @@
 ---
 services:
   netdata:
-    image: netdata/netdata:v1.36.1@sha256:a9c803191570d6f28f7e872673ee55f69dbfa7a17c3f99cb7c46ed799088ead0 # editorconfig-checker-disable-line
+    image: netdata/netdata:v1.37.1@sha256:e789f8af0983660ca3617882adbd41636a6c6f6cdf1da7dd994e84e0b8247295 # editorconfig-checker-disable-line
     hostname: "netdata-{{ inventory_hostname }}"
     environment:
       DOCKER_HOST: docker-socket-proxy:2375
@@ -33,7 +33,7 @@ services:
     restart: always
 
   prometheus:
-    image: prom/prometheus:v2.40.2@sha256:08dde1767993e5fee7539ec3d3462aded997981691a4d3c0cfe567beef89e5b5 # editorconfig-checker-disable-line
+    image: prom/prometheus:v2.41.0@sha256:1a3e9a878e50cd339ae7cf5718fda08381dda2d4ccd28e94bbaa3190d1a566c2 # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
@@ -45,7 +45,7 @@ services:
     restart: always
 
   unpoller:
-    image: ghcr.io/unpoller/unpoller:v2.1.9@sha256:2e81595ce317982044c185afe368a71d8d619de3296160605666667f0424648a # editorconfig-checker-disable-line
+    image: ghcr.io/unpoller/unpoller:v2.7.10@sha256:66753ff2273bf293a6ac2d013aae9cfca00476ee338fff665ff81bf67bd8867d # editorconfig-checker-disable-line
     #user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
@@ -56,7 +56,7 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana-oss:9.2.5@sha256:4b2606fb9abcf3af41b7409656dd5a7bf28d093b23c26603623ee09c79454afd # editorconfig-checker-disable-line
+    image: grafana/grafana-oss:9.3.2@sha256:2a73ae33c9f0c51af6eced2ef185d5d3682b4c378c4fdd6941a14e8ea4a3e95b # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       GF_INSTALL_PLUGINS: >
