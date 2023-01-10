@@ -1,5 +1,8 @@
 name: Workflow to simulate renovate updates
 
+"on":
+  workflow_dispatch:
+
 jobs:
   stub:
     name: Stub
