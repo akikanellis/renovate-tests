@@ -29,7 +29,7 @@
       fileMatch: [
         /* eslint-disable jsonc/no-useless-escape */
         "(^|/)justfile$",
-        "(^|/)gradle\.properties$",
+        "(^|/).+\.gradle(\.kts)?$",
         "(^workflow-templates|\.github/workflows)/[^/]+\.ya?ml$",
         "(^|/)action\.ya?ml$",
         "^ansible/.*vars/[^/]+\.ya?ml$"
@@ -59,23 +59,11 @@ semver\
       See:\
         * https://github.com/renovatebot/renovate/issues/19183\
         * https://github.com/renovatebot/renovate/issues/19184",
-      fileMatch: [".*tool-versions.*"],
+      fileMatch: ["(^|/)\.tool-versions$"],
       matchStrings: ["^java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
       datasourceTemplate: "adoptium-java",
       depNameTemplate: "java"
     },
-    {
-      description: "Update Java in .aki-versions.\
-      The asdf manager for renovate does not currently support the temurin\
-      distribution.\
-      See:\
-        * https://github.com/renovatebot/renovate/issues/19183\
-        * https://github.com/renovatebot/renovate/issues/19184",
-      fileMatch: ["(^|/)\.aki-versions$"],
-      matchStrings: ["java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
-      datasourceTemplate: "adoptium-java",
-      depNameTemplate: "java"
-    }
   ],
   packageRules: [
     {
