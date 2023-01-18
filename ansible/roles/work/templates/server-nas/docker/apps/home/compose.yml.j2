@@ -1,7 +1,7 @@
 ---
 services:
   home-assistant:
-    image: lscr.io/linuxserver/homeassistant:2023.1.2@sha256:586c0edf1bece2b35a6362a82fd7ab9b6832aba3b228e8cf944e438a2685b1db # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/homeassistant:2023.1.5@sha256:e87c32a546ea20d63808b178f1df9d418243497182173bf514711571f16cdce2 # editorconfig-checker-disable-line
     environment:
       PUID: "{{ ansible_manager_user_uid }}"
       PGID: "{{ ansible_manager_user_gid }}"
@@ -12,7 +12,7 @@ services:
     restart: always
 
   tasmoadmin:
-    image: ghcr.io/tasmoadmin/tasmoadmin:v2.3.0@sha256:75f799e16bdfb0e72c1d6ad5bf3330c49092cd79d54c5c660cc14f6aaa3c5f4e # editorconfig-checker-disable-line
+    image: ghcr.io/tasmoadmin/tasmoadmin:v2.3.3@sha256:db4605fbca9ccb16378b9b55cbce3e37d6ee36c456a715a902ace64f29abaf87 # editorconfig-checker-disable-line
     environment:
       TZ: "{{ timezone }}"
     volumes:
