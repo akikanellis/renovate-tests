@@ -27,7 +27,7 @@ jobs:
         with:
           distribution: temurin
           # renovate: datasource=adoptium-java depName=java
-          java-version: 17.0.4+101
+          java-version: 17.0.5+8
 
       - name: Action that uses python version
         # yamllint disable-line rule:line-length
