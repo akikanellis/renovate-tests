@@ -25,6 +25,18 @@
   prHourlyLimit: 50,
   regexManagers: [
     {
+      description: "Update Java in .tool-versions.\
+      The asdf manager for renovate does not currently support the temurin\
+      distribution.\
+      See:\
+        * https://github.com/renovatebot/renovate/issues/19183\
+        * https://github.com/renovatebot/renovate/issues/19184",
+      fileMatch: ["(^|/)\.tool-versions$"],
+      matchStrings: ["java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
+      datasourceTemplate: "adoptium-java",
+      depNameTemplate: "java"
+    },
+    {
       description: "Any other file with dependencies",
       fileMatch: [
         /* eslint-disable jsonc/no-useless-escape */
@@ -51,18 +63,6 @@
 {{else}}\
 semver\
 {{/if}}"
-    },
-    {
-      description: "Update Java in .tool-versions.\
-      The asdf manager for renovate does not currently support the temurin\
-      distribution.\
-      See:\
-        * https://github.com/renovatebot/renovate/issues/19183\
-        * https://github.com/renovatebot/renovate/issues/19184",
-      fileMatch: ["(^|/)\.tool-versions$"],
-      matchStrings: ["java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
-      datasourceTemplate: "adoptium-java",
-      depNameTemplate: "java"
     },
   ],
   packageRules: [
