@@ -2,6 +2,7 @@
 name: monitoring
 
 services:
+  # image with major.minor.patch
   autoheal:
     image: willfarrell/autoheal:1.2.0@sha256:31f580ef0279eaced5b38d631b08c474d70d8403c1c2fdd6ddcf2e879d5f3f7c # editorconfig-checker-disable-line
     volumes:
@@ -10,19 +11,9 @@ services:
       AUTOHEAL_CONTAINER_LABEL: all
     restart: always
 
-  docker-socket-proxy:
-    # Unfortunately this image does not provide versions other than `latest`
-    image: ghcr.io/tecnativa/docker-socket-proxy:latest@sha256:6c22b9545adc95258af9deffdde6c0ce0a0a70716771e5a4e02d24d1b6e0dda1 # editorconfig-checker-disable-line
-    environment:
-      CONTAINERS: 1
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    ports:
-      - "2375:2375"
-    restart: always
-
+  # image with major.minor
   portainer:
-    image: portainer/portainer-ce:2.16.2@sha256:f7607310051ee21f58f99d7b7f7878a6a49d4850422d88a31f8c61c248bbc3a4 # editorconfig-checker-disable-line
+    image: portainer/portainer-ce:2.16 # editorconfig-checker-disable-line
     volumes:
       - "{{ volumes_directory }}/portainer:/data"
 
@@ -32,11 +23,23 @@ services:
       - "9000:9000"
     restart: always
 
+  # image with major
   mongodb:
-    image: mongo:4.4.18@sha256:1fd5dbccbe349fe6eeb58f2327044aa9392f80ee5ea1f9317ed3a10591c14f07 # editorconfig-checker-disable-line
+    image: mongo:4 # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
     volumes:
       - "{{ volumes_directory }}/mongodb/db:/data/db"
+    restart: always
+
+  # image with latest
+  docker-socket-proxy:
+    image: ghcr.io/tecnativa/docker-socket-proxy:latest@sha256:6c22b9545adc95258af9deffdde6c0ce0a0a70716771e5a4e02d24d1b6e0dda1 # editorconfig-checker-disable-line
+    environment:
+      CONTAINERS: 1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - "2375:2375"
     restart: always
