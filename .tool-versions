@@ -1,5 +1,5 @@
 direnv 2.32.2
 java temurin-17.0.6+10
-kotlin 1.8.0
-python 3.11.1
-nodejs 18.13.0
+kotlin 1.8.10
+python 3.11.2
+nodejs 18.15.0
