@@ -73,10 +73,11 @@ semver\
       automerge: false
     },
     {
-      description: "Group docker digest updates",
-      "groupName": "all docker digest updates",
-      "groupSlug": "all-docker-digest",
-      "matchUpdateTypes": ["digest"]
+      description: "Group Docker digest updates",
+      groupName: "all Docker digest dependencies",
+      groupSlug: "all-docker-digest",
+      matchDatasources: ["docker"],
+      matchUpdateTypes: ["digest"]
     },
     {
       description: "Limit semantic-release versions to 19.x.x.\
