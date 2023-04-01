@@ -104,6 +104,44 @@ v?\
 (?<major>\\d+)\
 (\\.(?<minor>\\d+))?\
 (\\.(?<patch>\\d+))?$"
+    },
+    {
+      description: "Limit lscr.io/linuxserver/heimdall versions to 2020.x.x.\
+      There is a single 2021.x.x version which interferes with the normal\
+      versions it exposes causing older versions being pulled in as if they are\
+      newer",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["lscr.io/linuxserver/heimdall"],
+      allowedVersions: "<= 2020"
+    },
+    {
+      description: "Limit lscr.io/linuxserver/qbittorrent versions to 13.x.x.\
+      The versioning changed from version 14.x.x - 20.x.x causing older\
+      versions being pulled in as if they are newer",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["lscr.io/linuxserver/qbittorrent"],
+      allowedVersions: "<= 13"
+    },
+    {
+      description: "Limit mongo versions to 4.x.x.\
+      Version 5.0.0 introduced a minimum architecture which makes it\
+      incompatible with the current architecture of `server-nas`\
+      See:\
+      https://www.mongodb.com/docs/manual/release-notes/5.0/#platform-support",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["mongo"],
+      allowedVersions: "<= 4"
+    },
+    {
+      description: "Limit graylog versions to 4.x.x.\
+      Version 5.0.0 introduced a minimum MongoDB version of 5.x.x which makes\
+      it incompatible with the current mongo limitation\
+      See:\
+        - https://go2docs.graylog.org/5-0/changelogs/changelog.html\
+        - https://github.com/Graylog2/graylog2-server/issues/13660",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["graylog/graylog"],
+      allowedVersions: "<= 4"
     }
   ],
   "docker-compose": {
