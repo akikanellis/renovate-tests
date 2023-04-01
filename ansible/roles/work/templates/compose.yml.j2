@@ -25,7 +25,7 @@ services:
 
   # image with major
   mongodb:
-    image: mongo:4@sha256:7fb082eda5d1096c7749bd3890f0e23ad99fc5059902b5e47df8873d059c749a # editorconfig-checker-disable-line
+    image: mongo:6@sha256:cc4522f3f5c0d3435046eb51b1d8a633d8e24d8e661b6ba127a98e5519d11bde # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
