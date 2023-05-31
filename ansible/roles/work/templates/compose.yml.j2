@@ -25,7 +25,7 @@ services:
 
   # image with major
   mongodb:
-    image: mongo:4@sha256:7fb082eda5d1096c7749bd3890f0e23ad99fc5059902b5e47df8873d059c749a # editorconfig-checker-disable-line
+    image: mongo:4@sha256:967fecde146a0d1ac5ec5805a2c759066b6b94d6fb3977e22292c1d58df244e3 # editorconfig-checker-disable-line
     user: "{{ ansible_manager_user_uid }}:{{ ansible_manager_user_gid }}"
     environment:
       TZ: "{{ timezone }}"
@@ -72,7 +72,7 @@ services:
 
   # image with docker digest update (2/3)
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:4.5.2@sha256:ee4daaf5b695010a56f5150093eea129ee104685bd73e6181fbea2083d74d354 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/qbittorrent:4.5.2@sha256:cd75ae74f83232b23a27ffef5d98f4bee41f247a2b626dcaf0b429b699c6b6a5 # editorconfig-checker-disable-line
     environment:
       TZ: "{{ timezone }}"
 
@@ -95,7 +95,7 @@ services:
 
   # image with docker digest update (3/3)
   radarr:
-    image: lscr.io/linuxserver/radarr:4.3.2@sha256:c3efa1f363d69073ab05dc16c2981bec112a5b6f2d18b0c9a44d584b4a000bdb # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/radarr:4.3.2@sha256:d4ec21fecaab6ab9abaef6730ee2f394877999174b3b7f14b709aaf4d666cc2f # editorconfig-checker-disable-line
     environment:
       TZ: "{{ timezone }}"
 
