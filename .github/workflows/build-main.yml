@@ -16,7 +16,7 @@ env:
   CONVENTIONAL_CHANGELOG_CONVENTIONALCOMMITS_VERSION: 6.1.0
 
   # renovate: datasource=npm depName=gradle-semantic-release-plugin
-  GRADLE_SEMANTIC_RELEASE_PLUGIN_VERSION: 1.7.6
+  GRADLE_SEMANTIC_RELEASE_PLUGIN_VERSION: 1.7.7
 
 jobs:
   release:
