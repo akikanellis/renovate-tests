@@ -1,0 +1,72 @@
+---
+name: Build Main
+
+"on":
+  push:
+    branches: [main]
+
+env:
+  # renovate: datasource=npm depName=@semantic-release/changelog
+  SEMANTIC_RELEASE_CHANGELOG_VERSION: 6.0.3
+
+  # renovate: datasource=npm depName=@semantic-release/git
+  SEMANTIC_RELEASE_GIT_VERSION: 10.0.1
+
+  # renovate: datasource=npm depName=conventional-changelog-conventionalcommits
+  CONVENTIONAL_CHANGELOG_CONVENTIONALCOMMITS_VERSION: 7.0.2
+
+  # renovate: datasource=npm depName=gradle-semantic-release-plugin
+  GRADLE_SEMANTIC_RELEASE_PLUGIN_VERSION: 1.7.4
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    concurrency: ${{ github.workflow }}-release
+
+    outputs:
+      release-published: ${{ steps.release.outputs.new_release_published }}
+      release-version: ${{ steps.release.outputs.new_release_version }}
+
+    steps:
+      - name: Checkout
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
+        with:
+          persist-credentials: false
+
+      - name: Setup Java
+        # yamllint disable-line rule:line-length
+        uses: actions/setup-java@0ab4596768b603586c0de567f2430c30f5b0d2b0 # v3.13.0
+        with:
+          distribution: temurin
+          # renovate: datasource=java-version depName=java
+          java-version: 17.0.8+101
+
+      - name: Setup Gradle
+        # yamllint disable-line rule:line-length
+        uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a # v2.9.0
+
+      - name: Release
+        id: release
+        # yamllint disable-line rule:line-length
+        uses: cycjimmy/semantic-release-action@61680d0e9b02ff86f5648ade99e01be17f0260a4 # v4.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}
+          GIT_AUTHOR_NAME: aki-bot[bot]
+          GIT_AUTHOR_EMAIL: 103840025+aki-bot[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: aki-bot[bot]
+          GIT_COMMITTER_EMAIL: 103840025+aki-bot[bot]@users.noreply.github.com
+          RUNNER_DEBUG: 1
+        with:
+          # renovate: datasource=npm depName=semantic-release
+          semantic_version: 22.0.5
+          extra_plugins:
+            "@semantic-release/changelog@\
+            ${{ env.SEMANTIC_RELEASE_CHANGELOG_VERSION }} \
+            @semantic-release/git@\
+            ${{ env.SEMANTIC_RELEASE_GIT_VERSION }} \
+            conventional-changelog-conventionalcommits@\
+            ${{ env.CONVENTIONAL_CHANGELOG_CONVENTIONALCOMMITS_VERSION }} \
+            gradle-semantic-release-plugin@\
+            ${{ env.GRADLE_SEMANTIC_RELEASE_PLUGIN_VERSION }}"
