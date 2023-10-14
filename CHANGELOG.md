@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/akikanellis/renovate-tests/compare/v1.0.1...v1.0.2) (2023-10-14)
+
+
+### Build System
+
+* update semantic release ([2a87328](https://github.com/akikanellis/renovate-tests/commit/2a87328ac55056b90bcd765961b2bb5986b6c8fa))
+
 ## [1.0.1](https://github.com/akikanellis/renovate-tests/compare/v1.0.0...v1.0.1) (2023-10-14)
 
 
