@@ -1,3 +1,11 @@
+## [1.0.8](https://github.com/akikanellis/renovate-tests/compare/v1.0.7...v1.0.8) (2023-10-17)
+
+
+### Build System
+
+* remove platformAutomerge (it is the default) ([abde1ee](https://github.com/akikanellis/renovate-tests/commit/abde1ee130aa989781f4b2757240203e4ecafea1))
+* remove PR rollback ([1b7e88f](https://github.com/akikanellis/renovate-tests/commit/1b7e88fd170417b7019034bc2982b05443ea34dc))
+
 ## [1.0.7](https://github.com/akikanellis/renovate-tests/compare/v1.0.6...v1.0.7) (2023-10-17)
 
 
