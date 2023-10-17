@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/akikanellis/renovate-tests/compare/v1.0.5...v1.0.6) (2023-10-17)
+
+
+### Build System
+
+* **deps:** update all non-major dependencies ([#127](https://github.com/akikanellis/renovate-tests/issues/127)) ([1c1dec4](https://github.com/akikanellis/renovate-tests/commit/1c1dec4dbcb9633fd884d68f6cbab9a013baeac0))
+
 ## [1.0.5](https://github.com/akikanellis/renovate-tests/compare/v1.0.4...v1.0.5) (2023-10-17)
 
 
