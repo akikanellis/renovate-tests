@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/akikanellis/renovate-tests/compare/v1.0.10...v1.0.11) (2023-10-17)
+
+
+### Build System
+
+* downgrade renovate ([f76f1e5](https://github.com/akikanellis/renovate-tests/commit/f76f1e501bc631926a4adb0ca8f5d23fee280ad5))
+
 ## [1.0.10](https://github.com/akikanellis/renovate-tests/compare/v1.0.9...v1.0.10) (2023-10-17)
 
 
