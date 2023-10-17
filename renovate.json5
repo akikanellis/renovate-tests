@@ -1,7 +1,7 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
-    "config:base",
+    "config:recommended",
 
     ":semanticCommitType(build)",
     ":semanticCommitTypeAll(build)",
@@ -23,7 +23,7 @@
   platformAutomerge: true,
   rollbackPrs: true,
   prHourlyLimit: 50,
-  regexManagers: [
+  customManagers: [
     {
       description: "Update Java in .tool-versions.\
       The asdf manager for renovate does not currently support the temurin\
@@ -31,6 +31,7 @@
       See:\
         * https://github.com/renovatebot/renovate/issues/19183\
         * https://github.com/renovatebot/renovate/issues/19184",
+      customType: "regex",
       // eslint-disable-next-line jsonc/no-useless-escape
       fileMatch: ["(^|/)\.tool-versions$"],
       matchStrings: ["java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
@@ -39,6 +40,7 @@
     },
     {
       description: "Any other file with dependencies",
+      customType: "regex",
       fileMatch: [
         /* eslint-disable jsonc/no-useless-escape */
         "(^|/)justfile$",
@@ -62,7 +64,7 @@
 {{#if versioning}}\
 {{{versioning}}}\
 {{else}}\
-semver\
+semver-coerced\
 {{/if}}"
     }
   ],
@@ -81,7 +83,7 @@ semver\
     },
     {
       description: "Limit semantic-release versions to 21.x.x.\
-      Version 22.0.0 is not currently compatible with\
+      Version 22.x.x is currently not compatible with\
       gradle-semantic-release-plugin",
       matchDatasources: ["npm"],
       matchPackageNames: ["semantic-release"],
@@ -103,9 +105,9 @@ semver\
       allowedVersions: "<= 1.7.7"
     },
     {
-      description: "Use correct compatibility for github/super-linter",
+      description: "Use correct compatibility for ghcr.io/super-linter/super-linter",
       matchDatasources: ["docker"],
-      matchPackageNames: ["github/super-linter"],
+      matchPackageNames: ["ghcr.io/super-linter/super-linter"],
       versioning: "\
 regex:\
 ^((?<compatibility>.+)-)?\
