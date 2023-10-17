@@ -21,7 +21,6 @@
   requireConfig: "required",
   automerge: true,
   platformAutomerge: true,
-  rollbackPrs: true,
   prHourlyLimit: 50,
   customManagers: [
     {
