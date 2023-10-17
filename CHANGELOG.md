@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/akikanellis/renovate-tests/compare/v1.0.4...v1.0.5) (2023-10-17)
+
+
+### Build System
+
+* **deps:** update actions/checkout action to v4 ([#128](https://github.com/akikanellis/renovate-tests/issues/128)) ([861e898](https://github.com/akikanellis/renovate-tests/commit/861e89856e45a3f8a4f263b5a6d7581cf35e285b))
+* **deps:** update lscr.io/linuxserver/radarr docker tag to v5 ([#130](https://github.com/akikanellis/renovate-tests/issues/130)) ([1d70022](https://github.com/akikanellis/renovate-tests/commit/1d70022b81503664a26a3bbaf5fbd6cad5d767c3))
+
 ## [1.0.4](https://github.com/akikanellis/renovate-tests/compare/v1.0.3...v1.0.4) (2023-10-17)
 
 
