@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/akikanellis/renovate-tests/compare/v1.0.3...v1.0.4) (2023-10-17)
+
+
+### Build System
+
+* **deps:** update ghcr.io/renovatebot/renovate docker tag to v37 ([#129](https://github.com/akikanellis/renovate-tests/issues/129)) ([e01a4ea](https://github.com/akikanellis/renovate-tests/commit/e01a4ea7a3c151bf31abda7557fc8bc67b478067))
+* **deps:** update renovatebot/github-action action to v39 ([#131](https://github.com/akikanellis/renovate-tests/issues/131)) ([d0e7c04](https://github.com/akikanellis/renovate-tests/commit/d0e7c04a894998a7979d73dd3b617c8929d7a801))
+
 ## [1.0.3](https://github.com/akikanellis/renovate-tests/compare/v1.0.2...v1.0.3) (2023-10-17)
 
 
