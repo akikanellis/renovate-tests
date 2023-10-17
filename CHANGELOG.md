@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/akikanellis/renovate-tests/compare/v1.0.6...v1.0.7) (2023-10-17)
+
+
+### Build System
+
+* **deps:** update mongo:4 docker digest to dd66acb ([#126](https://github.com/akikanellis/renovate-tests/issues/126)) ([b10c540](https://github.com/akikanellis/renovate-tests/commit/b10c5409a6b62fea69c9bb0dc87157a8abc48043))
+
 ## [1.0.6](https://github.com/akikanellis/renovate-tests/compare/v1.0.5...v1.0.6) (2023-10-17)
 
 
