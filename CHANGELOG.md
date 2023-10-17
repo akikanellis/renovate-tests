@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/akikanellis/renovate-tests/compare/v1.0.9...v1.0.10) (2023-10-17)
+
+
+### Build System
+
+* downgrade super linter ([ff5c2bb](https://github.com/akikanellis/renovate-tests/commit/ff5c2bba32f2572068e92404eb3daf5caa430567))
+
 ## [1.0.9](https://github.com/akikanellis/renovate-tests/compare/v1.0.8...v1.0.9) (2023-10-17)
 
 
