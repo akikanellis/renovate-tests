@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/akikanellis/renovate-tests/compare/v1.0.2...v1.0.3) (2023-10-17)
+
+
+### Build System
+
+* switch orgs for super linter ([cc3f1b6](https://github.com/akikanellis/renovate-tests/commit/cc3f1b6e63ca8aad99309fa4a22b7ec33d664c21))
+
 ## [1.0.2](https://github.com/akikanellis/renovate-tests/compare/v1.0.1...v1.0.2) (2023-10-14)
 
 
