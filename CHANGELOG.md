@@ -1,3 +1,10 @@
+## [1.0.25](https://github.com/akikanellis/renovate-tests/compare/v1.0.24...v1.0.25) (2023-12-10)
+
+
+### Build System
+
+* tidy up ([2c9c174](https://github.com/akikanellis/renovate-tests/commit/2c9c174477f46987f6168cc6fab924fda11ef6e1))
+
 ## [1.0.24](https://github.com/akikanellis/renovate-tests/compare/v1.0.23...v1.0.24) (2023-12-10)
 
 
