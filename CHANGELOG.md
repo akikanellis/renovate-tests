@@ -1,3 +1,10 @@
+## [1.0.36](https://github.com/akikanellis/renovate-tests/compare/v1.0.35...v1.0.36) (2023-12-10)
+
+
+### Build System
+
+* downgrade to different version ([2d81471](https://github.com/akikanellis/renovate-tests/commit/2d81471ec30f0bb98afd1608c95abe4a54d14eec))
+
 ## [1.0.35](https://github.com/akikanellis/renovate-tests/compare/v1.0.34...v1.0.35) (2023-12-10)
 
 
