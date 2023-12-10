@@ -1,3 +1,18 @@
+## [1.0.26](https://github.com/akikanellis/renovate-tests/compare/v1.0.25...v1.0.26) (2023-12-10)
+
+
+### Build System
+
+* add missing escapes ([9a91c4e](https://github.com/akikanellis/renovate-tests/commit/9a91c4eb2ceeabdd63802d57ecfd9e129c122e68))
+* **deps:** update all non-major dependencies ([#145](https://github.com/akikanellis/renovate-tests/issues/145)) ([c749a0a](https://github.com/akikanellis/renovate-tests/commit/c749a0a19c4564f1d02f411c739ababb893eb3ea))
+* **deps:** update dependency java to v17.0.9+9 ([#141](https://github.com/akikanellis/renovate-tests/issues/141)) ([a9984d8](https://github.com/akikanellis/renovate-tests/commit/a9984d8291f36555b1641a6c522db463aa9c7f74))
+* **deps:** update dependency java to v17.0.9+9 ([#146](https://github.com/akikanellis/renovate-tests/issues/146)) ([e22da0c](https://github.com/akikanellis/renovate-tests/commit/e22da0c28978f9a5273697d4198a5bd649f47e9a))
+* downgrade java ([2deb880](https://github.com/akikanellis/renovate-tests/commit/2deb88014b3c7ee93ba9c814b785adc65f771066))
+* downgrade stuff ([9b1e5fa](https://github.com/akikanellis/renovate-tests/commit/9b1e5fa7afc373b0b23b2bf50986c09520f7f308))
+* fix regex ([25f189a](https://github.com/akikanellis/renovate-tests/commit/25f189af678780f85fc11ee64d175f7f8e93d447))
+* update Java in GitHub Action workflows ([14bdb86](https://github.com/akikanellis/renovate-tests/commit/14bdb8675db213bd498e6f41a89cf7791b33e32a))
+* update Just ([a9a1f95](https://github.com/akikanellis/renovate-tests/commit/a9a1f95f666d3cddf734660ca3e255acefcf64a8))
+
 ## [1.0.25](https://github.com/akikanellis/renovate-tests/compare/v1.0.24...v1.0.25) (2023-12-10)
 
 
