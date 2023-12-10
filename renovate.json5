@@ -44,7 +44,8 @@ just-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
 (\\s+|\\s+.*)"
       ],
       datasourceTemplate: "crate",
-      depNameTemplate: "just"
+      depNameTemplate: "just",
+      versioningTemplate: "semver-coerced"
     },
     {
       description: "Update Python in GitHub Action workflows",
