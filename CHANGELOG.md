@@ -1,3 +1,12 @@
+## [1.0.16](https://github.com/akikanellis/renovate-tests/compare/v1.0.15...v1.0.16) (2023-12-10)
+
+
+### Build System
+
+* **deps:** update actions/setup-java action to v4 ([#139](https://github.com/akikanellis/renovate-tests/issues/139)) ([bfeadbb](https://github.com/akikanellis/renovate-tests/commit/bfeadbb3b624164c4a7ec3682b715eda4cfc4402))
+* **deps:** update actions/setup-python action to v5 ([#140](https://github.com/akikanellis/renovate-tests/issues/140)) ([6eb24e4](https://github.com/akikanellis/renovate-tests/commit/6eb24e46cfb4a91021f55cde985e56fd817f4b97))
+* **deps:** update all non-major dependencies ([#133](https://github.com/akikanellis/renovate-tests/issues/133)) ([287c5a7](https://github.com/akikanellis/renovate-tests/commit/287c5a7e72c45cd5b05a34399821a0e4a8a07740))
+
 ## [1.0.15](https://github.com/akikanellis/renovate-tests/compare/v1.0.14...v1.0.15) (2023-12-10)
 
 
