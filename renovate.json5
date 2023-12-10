@@ -97,7 +97,8 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
       ],
       extractVersionTemplate: "^(?<version>\\d+)$",
       datasourceTemplate: "java-version",
-      depNameTemplate: "java"
+      depNameTemplate: "java",
+      versioningTemplate: "semver-coerced"
     },
     {
       description: "Any other file with dependencies",
