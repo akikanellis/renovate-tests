@@ -29,9 +29,15 @@ jobs:
           # renovate: datasource=adoptium-java depName=java
           java-version: 17.0.9+9
 
+      - name: Show Java version
+        run: java --version
+
       - name: Action that uses python version
         # yamllint disable-line rule:line-length
         uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
         with:
           python-version: 3.12.1
           cache: pip
+
+      - name: Show Python version
+        run: python --version
