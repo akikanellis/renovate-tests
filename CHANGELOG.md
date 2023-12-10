@@ -1,3 +1,10 @@
+## [1.0.32](https://github.com/akikanellis/renovate-tests/compare/v1.0.31...v1.0.32) (2023-12-10)
+
+
+### Build System
+
+* add versioning template ([2e3e3e7](https://github.com/akikanellis/renovate-tests/commit/2e3e3e72ee6f250eba34f6cddce0d6052acbb96e))
+
 ## [1.0.31](https://github.com/akikanellis/renovate-tests/compare/v1.0.30...v1.0.31) (2023-12-10)
 
 
