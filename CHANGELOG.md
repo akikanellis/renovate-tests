@@ -1,3 +1,10 @@
+## [1.0.31](https://github.com/akikanellis/renovate-tests/compare/v1.0.30...v1.0.31) (2023-12-10)
+
+
+### Build System
+
+* downgrade Java ([845a065](https://github.com/akikanellis/renovate-tests/commit/845a06507d845cdfdc374d0a98dd83ea38868b49))
+
 ## [1.0.30](https://github.com/akikanellis/renovate-tests/compare/v1.0.29...v1.0.30) (2023-12-10)
 
 
