@@ -1,3 +1,10 @@
+## [1.0.21](https://github.com/akikanellis/renovate-tests/compare/v1.0.20...v1.0.21) (2023-12-10)
+
+
+### Build System
+
+* update renovate properly ([06c4be1](https://github.com/akikanellis/renovate-tests/commit/06c4be15550a49a6b6ccd364a84c0ddcc725abda))
+
 ## [1.0.20](https://github.com/akikanellis/renovate-tests/compare/v1.0.19...v1.0.20) (2023-12-10)
 
 
