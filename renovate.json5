@@ -23,6 +23,17 @@
   prHourlyLimit: 50,
   customManagers: [
     {
+      "description": "Update Renovate in GitHub Action workflows",
+      "customType": "regex",
+      "fileMatch": ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
+      "matchStrings": [
+        "renovate-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
+        (\\s+|\\s+.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/renovatebot/renovate"
+    },
+    {
       description: "Update Java in .tool-versions.\
       The asdf manager for renovate does not currently support the temurin\
       distribution.\
@@ -90,6 +101,19 @@ semver-coerced\
       groupSlug: "all-docker-digest",
       matchDatasources: ["docker"],
       matchUpdateTypes: ["digest"]
+    },
+    {
+      "description": "Disable Renovate digest pinning in GitHub Action\
+      workflows",
+      "matchManagers": ["regex"],
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/renovatebot/renovate"],
+      "matchFileNames": [
+        ".github/actions/**/*.y*ml",
+        ".github/workflows/*.y*ml"
+      ],
+      "matchUpdateTypes": ["pinDigest"],
+      "enabled": false
     },
     {
       description: "Limit semantic-release versions to 21.x.x.\
