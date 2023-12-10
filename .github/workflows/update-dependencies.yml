@@ -33,7 +33,7 @@ jobs:
         # yamllint disable-line rule:line-length
         uses: renovatebot/github-action@64257ea9bae8d8634eba1d545638c2cab62e69e6 # v39.2.1
         with:
-          renovate-version: 37.89.4
+          renovate-version: 37.89.6
           configurationFile: renovate.json5
           token: x-access-token:${{ steps.get-token.outputs.token }}
         env:
