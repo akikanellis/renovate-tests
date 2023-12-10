@@ -81,7 +81,6 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
         * https://github.com/renovatebot/renovate/issues/19183\
         * https://github.com/renovatebot/renovate/issues/19184",
       customType: "regex",
-      // eslint-disable-next-line jsonc/no-useless-escape
       fileMatch: ["(^|/)\\.tool-versions$"],
       matchStrings: ["java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
       datasourceTemplate: "java-version",
@@ -90,13 +89,13 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
     {
       description: "Update Java in Gradle files",
       customType: "regex",
-      // eslint-disable-next-line jsonc/no-useless-escape
       fileMatch: ["(^|/).+.gradle(\\.kts)?$"],
       matchStrings: [
         "javaVersion\\s*=\\s*(\"|')?(?<currentValue>.+)(\"|')?(\\s+|\\s+.*)"
       ],
       datasourceTemplate: "java-version",
-      depNameTemplate: "java"
+      depNameTemplate: "java",
+      versioningTemplate: "semver-coerced"
     },
     {
       description: "Any other file with dependencies",
