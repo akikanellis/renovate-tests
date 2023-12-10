@@ -1,3 +1,10 @@
+## [1.0.37](https://github.com/akikanellis/renovate-tests/compare/v1.0.36...v1.0.37) (2023-12-10)
+
+
+### Build System
+
+* update semantic-release in workflows ([1fe9081](https://github.com/akikanellis/renovate-tests/commit/1fe9081e22193eadefec45990e1ebbe4e1d64f05))
+
 ## [1.0.36](https://github.com/akikanellis/renovate-tests/compare/v1.0.35...v1.0.36) (2023-12-10)
 
 
