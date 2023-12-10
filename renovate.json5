@@ -48,6 +48,18 @@ just-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
       versioningTemplate: "semver-coerced"
     },
     {
+      description: "Update semantic-release in GitHub Action workflows",
+      customType: "regex",
+      fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
+      matchStrings: [
+        "\
+semantic_version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
+(\\s+|\\s+.*)"
+      ],
+      datasourceTemplate: "npm",
+      depNameTemplate: "semantic-release"
+    },
+    {
       description: "Update Python in GitHub Action workflows",
       customType: "regex",
       fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
