@@ -93,12 +93,10 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
       // eslint-disable-next-line jsonc/no-useless-escape
       fileMatch: ["(^|/).+.gradle(\\.kts)?$"],
       matchStrings: [
-        "javaVersion\\s*=\\s*(\"|')?(?<currentValue>\\d+)(\"|')?(\\s+|\\s+.*)"
+        "javaVersion\\s*=\\s*(\"|')?(?<currentValue>.+)(\"|')?(\\s+|\\s+.*)"
       ],
-      extractVersionTemplate: "^(?<version>\\d+)$",
       datasourceTemplate: "java-version",
-      depNameTemplate: "java",
-      versioningTemplate: "semver-coerced"
+      depNameTemplate: "java"
     },
     {
       description: "Any other file with dependencies",

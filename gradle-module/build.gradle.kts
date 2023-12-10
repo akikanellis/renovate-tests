@@ -21,10 +21,11 @@ dependencies {
 
 kotlin {
     jvmToolchain {
-        val javaVersion = 11
+      val javaVersion = "17.0.9+9"
+      val javaMajorVersion = javaVersion.split(".").first()
 
         vendor.set(JvmVendorSpec.ADOPTIUM)
-        languageVersion.set(JavaLanguageVersion.of(javaVersion))
+        languageVersion.set(JavaLanguageVersion.of(javaMajorVersion))
     }
 }
 
