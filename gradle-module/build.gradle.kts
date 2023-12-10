@@ -21,7 +21,7 @@ dependencies {
 
 kotlin {
     jvmToolchain {
-      val javaVersion = "17.0.9+9"
+      val javaVersion = "11.0.21+9"
       val javaMajorVersion = javaVersion.split(".").first()
 
         vendor.set(JvmVendorSpec.ADOPTIUM)
