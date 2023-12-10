@@ -1,3 +1,10 @@
+## [1.0.20](https://github.com/akikanellis/renovate-tests/compare/v1.0.19...v1.0.20) (2023-12-10)
+
+
+### Build System
+
+* revert pins ([b141061](https://github.com/akikanellis/renovate-tests/commit/b1410619a8ac4d25d1a19366f3b79e3856acb2fe))
+
 ## [1.0.19](https://github.com/akikanellis/renovate-tests/compare/v1.0.18...v1.0.19) (2023-12-10)
 
 
