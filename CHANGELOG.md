@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/akikanellis/renovate-tests/compare/v1.0.12...v1.0.13) (2023-12-10)
+
+
+### Build System
+
+* update permissions ([a3e0978](https://github.com/akikanellis/renovate-tests/commit/a3e097877810a0c51626f84ecd50758ec8782b6f))
+
 ## [1.0.12](https://github.com/akikanellis/renovate-tests/compare/v1.0.11...v1.0.12) (2023-11-03)
 
 
