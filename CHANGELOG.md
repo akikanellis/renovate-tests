@@ -1,3 +1,10 @@
+## [1.0.24](https://github.com/akikanellis/renovate-tests/compare/v1.0.23...v1.0.24) (2023-12-10)
+
+
+### Build System
+
+* **deps:** pin dependencies ([#144](https://github.com/akikanellis/renovate-tests/issues/144)) ([83154c8](https://github.com/akikanellis/renovate-tests/commit/83154c8b44b94a90c5c7235644f37ad543174d36))
+
 ## [1.0.23](https://github.com/akikanellis/renovate-tests/compare/v1.0.22...v1.0.23) (2023-12-10)
 
 
