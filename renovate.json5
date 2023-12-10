@@ -23,15 +23,28 @@
   prHourlyLimit: 50,
   customManagers: [
     {
-      "description": "Update Renovate in GitHub Action workflows",
-      "customType": "regex",
-      "fileMatch": ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
-      "matchStrings": [
+      description: "Update Renovate in GitHub Action workflows",
+      customType: "regex",
+      fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
+      matchStrings: [
         "renovate-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
         (\\s+|\\s+.*)"
       ],
-      "datasourceTemplate": "docker",
-      "depNameTemplate": "ghcr.io/renovatebot/renovate"
+      datasourceTemplate: "docker",
+      depNameTemplate: "ghcr.io/renovatebot/renovate"
+    },
+    {
+      description: "Update Python in GitHub Action workflows",
+      customType: "regex",
+      fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
+      matchStrings: [
+        "python-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
+        (\\s+|\\s+.*)"
+      ],
+      extractVersionTemplate: "^v(?<version>\\S+)",
+      datasourceTemplate: "github-tags",
+      depNameTemplate: "python",
+      packageNameTemplate: "python/cpython"
     },
     {
       description: "Update Java in .tool-versions.\
@@ -103,17 +116,17 @@ semver-coerced\
       matchUpdateTypes: ["digest"]
     },
     {
-      "description": "Disable Renovate digest pinning in GitHub Action\
+      description: "Disable Renovate digest pinning in GitHub Action\
       workflows",
-      "matchManagers": ["regex"],
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/renovatebot/renovate"],
-      "matchFileNames": [
+      matchManagers: ["regex"],
+      matchDatasources: ["docker"],
+      matchPackageNames: ["ghcr.io/renovatebot/renovate"],
+      matchFileNames: [
         ".github/actions/**/*.y*ml",
         ".github/workflows/*.y*ml"
       ],
-      "matchUpdateTypes": ["pinDigest"],
-      "enabled": false
+      matchUpdateTypes: ["pinDigest"],
+      enabled: false
     },
     {
       description: "Limit semantic-release versions to 21.x.x.\
