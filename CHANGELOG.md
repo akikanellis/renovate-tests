@@ -1,3 +1,10 @@
+## [1.0.22](https://github.com/akikanellis/renovate-tests/compare/v1.0.21...v1.0.22) (2023-12-10)
+
+
+### Build System
+
+* remove super-linter ([3c43702](https://github.com/akikanellis/renovate-tests/commit/3c43702681e1a7509d66b9a3befb0ce533131bc0))
+
 ## [1.0.21](https://github.com/akikanellis/renovate-tests/compare/v1.0.20...v1.0.21) (2023-12-10)
 
 
