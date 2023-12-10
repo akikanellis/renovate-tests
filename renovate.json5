@@ -49,6 +49,18 @@ python-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
       packageNameTemplate: "python/cpython"
     },
     {
+      "description": "Update Java in GitHub Action workflows",
+      "customType": "regex",
+      "fileMatch": ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
+      "matchStrings": [
+        "\
+java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
+(\\s+|\\s+.*)"
+      ],
+      datasourceTemplate: "java-version",
+      depNameTemplate: "java"
+    },
+    {
       description: "Update Java in .tool-versions.\
       The asdf manager for renovate does not currently support the temurin\
       distribution.\
