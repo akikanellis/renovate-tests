@@ -1,3 +1,10 @@
+## [1.0.28](https://github.com/akikanellis/renovate-tests/compare/v1.0.27...v1.0.28) (2023-12-10)
+
+
+### Build System
+
+* **deps:** update dependency just to v1.16.0 ([#147](https://github.com/akikanellis/renovate-tests/issues/147)) ([4efdbaf](https://github.com/akikanellis/renovate-tests/commit/4efdbaf5fa93d6773e7bfcdf33753157610c3882))
+
 ## [1.0.27](https://github.com/akikanellis/renovate-tests/compare/v1.0.26...v1.0.27) (2023-12-10)
 
 
