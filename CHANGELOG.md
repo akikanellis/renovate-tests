@@ -1,3 +1,10 @@
+## [1.0.19](https://github.com/akikanellis/renovate-tests/compare/v1.0.18...v1.0.19) (2023-12-10)
+
+
+### Build System
+
+* allow all permissions ([cd9d443](https://github.com/akikanellis/renovate-tests/commit/cd9d443886283733677c89068933288deb9ac465))
+
 ## [1.0.18](https://github.com/akikanellis/renovate-tests/compare/v1.0.17...v1.0.18) (2023-12-10)
 
 
