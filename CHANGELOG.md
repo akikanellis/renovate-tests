@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/akikanellis/renovate-tests/compare/v1.0.17...v1.0.18) (2023-12-10)
+
+
+### Build System
+
+* enable debug logs ([246a944](https://github.com/akikanellis/renovate-tests/commit/246a9442fb46885bf92fb8dc150e4d03bb06765e))
+
 ## [1.0.17](https://github.com/akikanellis/renovate-tests/compare/v1.0.16...v1.0.17) (2023-12-10)
 
 
