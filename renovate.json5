@@ -69,7 +69,7 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
         * https://github.com/renovatebot/renovate/issues/19184",
       customType: "regex",
       // eslint-disable-next-line jsonc/no-useless-escape
-      fileMatch: ["(^|/)\.tool-versions$"],
+      fileMatch: ["(^|/)\\.tool-versions$"],
       matchStrings: ["java\\s+temurin-(?<currentValue>.+)(\\s+|\\s+.*)"],
       datasourceTemplate: "java-version",
       depNameTemplate: "java"
@@ -78,7 +78,7 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
       description: "Update Java in Gradle files",
       customType: "regex",
       // eslint-disable-next-line jsonc/no-useless-escape
-      fileMatch: ["(^|/).+.gradle(\.kts)?$"],
+      fileMatch: ["(^|/).+.gradle(\\.kts)?$"],
       matchStrings: [
         "javaVersion\\s*=\\s*(\"|')?(?<currentValue>\\d+)(\"|')?(\\s+|\\s+.*)"
       ],
@@ -90,13 +90,11 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
       description: "Any other file with dependencies",
       customType: "regex",
       fileMatch: [
-        /* eslint-disable jsonc/no-useless-escape */
         "(^|/)justfile$",
-        "(^|/).+\.gradle(\.kts)?$",
-        "(^workflow-templates|\.github/workflows)/[^/]+\.ya?ml$",
-        "(^|/)action\.ya?ml$",
-        "^ansible/.*vars/[^/]+\.ya?ml$"
-        /* eslint-enable jsonc/no-useless-escape */
+        "(^|/).+\\.gradle(\\.kts)?$",
+        "(^workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$",
+        "(^|/)action\\.ya?ml$",
+        "^ansible/.*vars/[^/]+\\.ya?ml$"
       ],
       matchStrings: [
         "\
@@ -217,7 +215,6 @@ v?\
     }
   ],
   "docker-compose": {
-    // eslint-disable-next-line jsonc/no-useless-escape
-    fileMatch: ["(^|/)(?:docker-)?compose[^/]*\.ya?ml\.j2$"]
+    fileMatch: ["(^|/)(?:docker-)?compose[^/]*\\.ya?ml\\.j2$"]
   }
 }
