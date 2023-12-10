@@ -1,3 +1,11 @@
+## [1.0.17](https://github.com/akikanellis/renovate-tests/compare/v1.0.16...v1.0.17) (2023-12-10)
+
+
+### Build System
+
+* **deps:** update dependency ansible.utils to v3 ([#142](https://github.com/akikanellis/renovate-tests/issues/142)) ([63f66f3](https://github.com/akikanellis/renovate-tests/commit/63f66f358a27472e55d0f55d814085c600819c4f))
+* **deps:** update dependency devsec.hardening to v9 ([#143](https://github.com/akikanellis/renovate-tests/issues/143)) ([479e271](https://github.com/akikanellis/renovate-tests/commit/479e271b87774f6fa278fabc4a9ad35291b5630d))
+
 ## [1.0.16](https://github.com/akikanellis/renovate-tests/compare/v1.0.15...v1.0.16) (2023-12-10)
 
 
