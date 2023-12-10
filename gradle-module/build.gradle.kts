@@ -21,7 +21,7 @@ dependencies {
 
 kotlin {
     jvmToolchain {
-        val javaVersion = 17
+        val javaVersion = 16
 
         vendor.set(JvmVendorSpec.ADOPTIUM)
         languageVersion.set(JavaLanguageVersion.of(javaVersion))

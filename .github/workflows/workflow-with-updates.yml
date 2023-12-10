@@ -26,8 +26,7 @@ jobs:
         uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4.0.0
         with:
           distribution: temurin
-          # renovate: datasource=adoptium-java depName=java
-          java-version: 17.0.9+9
+          java-version: 17.0.8+101
 
       - name: Show Java version
         run: java --version
@@ -36,7 +35,7 @@ jobs:
         # yamllint disable-line rule:line-length
         uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
         with:
-          python-version: 3.12.1
+          python-version: 3.12.0
           cache: pip
 
       - name: Show Python version
