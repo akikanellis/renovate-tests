@@ -1,3 +1,10 @@
+## [1.0.27](https://github.com/akikanellis/renovate-tests/compare/v1.0.26...v1.0.27) (2023-12-10)
+
+
+### Build System
+
+* use semver-coerced ([2b0c412](https://github.com/akikanellis/renovate-tests/commit/2b0c412f62dea6a7326a6fe638cbb81c7c5b3de0))
+
 ## [1.0.26](https://github.com/akikanellis/renovate-tests/compare/v1.0.25...v1.0.26) (2023-12-10)
 
 
