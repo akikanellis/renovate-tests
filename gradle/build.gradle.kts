@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.10"
+    kotlin("jvm") version "1.9.21"
 
     jacoco
 }
@@ -12,13 +12,13 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test-junit5"))
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.1")
 }
 
 kotlin {
     jvmToolchain {
         // renovate: datasource=adoptium-java depName=java
-        val javaVersion = "17.0.8+101"
+        val javaVersion = "17.0.9+9"
         val javaMajorVersion = javaVersion.split(".").first()
 
         vendor.set(JvmVendorSpec.ADOPTIUM)

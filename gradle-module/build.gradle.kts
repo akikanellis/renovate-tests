@@ -2,7 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
-    kotlin("jvm") version "1.9.10"
+    kotlin("jvm") version "1.9.21"
 
     jacoco
 }
@@ -15,8 +15,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test-junit5"))
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.1")
 }
 
 kotlin {

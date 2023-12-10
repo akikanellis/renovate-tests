@@ -13,7 +13,7 @@ services:
 
   # image with major.minor
   portainer:
-    image: portainer/portainer-ce:2.19.1@sha256:f29cbc7b26ebd701b1fe92b4df42edea350e871372a6296a1fa16ba999481fb2 # editorconfig-checker-disable-line
+    image: portainer/portainer-ce:2.19.4@sha256:908d04d20e86f07a50b0f1a029a111b89aa3089b7fc7fdf68ec1c71b025f36cd # editorconfig-checker-disable-line
     volumes:
       - "{{ volumes_directory }}/portainer:/data"
 
@@ -46,7 +46,7 @@ services:
 
   # image with docker digest update (1/3)
   plex:
-    image: lscr.io/linuxserver/plex:1.32.6@sha256:e1725dd367cf30378f377093ad7e6fdd2f72a054522266aca632ed160a2f372c # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3d490837584f958c72412 # editorconfig-checker-disable-line
     environment:
       TZ: "{{ timezone }}"
 
@@ -72,7 +72,7 @@ services:
 
   # image with docker digest update (2/3)
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:4.5.5@sha256:6ce86cd2924985385641d5bcac0234e82df2da8baa6e1e02b4c0a95635445410 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/qbittorrent:4.6.2@sha256:9a1e2c2925b85230bde4a0b450ef132e9c97ede934fb5a13d33eddf8599090e2 # editorconfig-checker-disable-line
     environment:
       TZ: "{{ timezone }}"
 
@@ -95,7 +95,7 @@ services:
 
   # image with docker digest update (3/3)
   radarr:
-    image: lscr.io/linuxserver/radarr:5.0.3@sha256:9d963b1a7cf228904a0d17ad99e5fe2aeb91c17432dbe166ba1950664e3a9f86 # editorconfig-checker-disable-line
+    image: lscr.io/linuxserver/radarr:5.1.3@sha256:b4ea6d2132710253d14b2543a3acf6ad63c3feca9afd39e7de806592ec1ef466 # editorconfig-checker-disable-line
     environment:
       TZ: "{{ timezone }}"
 

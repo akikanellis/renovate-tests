@@ -27,12 +27,12 @@ jobs:
         with:
           distribution: temurin
           # renovate: datasource=adoptium-java depName=java
-          java-version: 17.0.8+101
+          java-version: 17.0.9+9
 
       - name: Action that uses python version
         # yamllint disable-line rule:line-length
         uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
         with:
           # renovate: datasource=docker depName=python versioning=docker
-          python-version: 3.12.0
+          python-version: 3.12.1
           cache: pip
