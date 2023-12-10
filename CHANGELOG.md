@@ -1,3 +1,10 @@
+## [1.0.23](https://github.com/akikanellis/renovate-tests/compare/v1.0.22...v1.0.23) (2023-12-10)
+
+
+### Build System
+
+* update Python in GitHub Action workflows ([3f362c9](https://github.com/akikanellis/renovate-tests/commit/3f362c9e55934b1db435cb13f155fa6db2e499dc))
+
 ## [1.0.22](https://github.com/akikanellis/renovate-tests/compare/v1.0.21...v1.0.22) (2023-12-10)
 
 
