@@ -1,3 +1,11 @@
+## [1.0.38](https://github.com/akikanellis/renovate-tests/compare/v1.0.37...v1.0.38) (2023-12-10)
+
+
+### Build System
+
+* **deps:** update dependency java to v17 ([#148](https://github.com/akikanellis/renovate-tests/issues/148)) ([b8df27b](https://github.com/akikanellis/renovate-tests/commit/b8df27b3625e2a9f5b3ddda79077de2346c09264))
+* **deps:** update dependency semantic-release to v21.1.2 ([#149](https://github.com/akikanellis/renovate-tests/issues/149)) ([a773b63](https://github.com/akikanellis/renovate-tests/commit/a773b63675ff5c4133fedcdcb17ad2284a5e0a19))
+
 ## [1.0.37](https://github.com/akikanellis/renovate-tests/compare/v1.0.36...v1.0.37) (2023-12-10)
 
 
