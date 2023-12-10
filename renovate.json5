@@ -35,6 +35,18 @@ renovate-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
       depNameTemplate: "ghcr.io/renovatebot/renovate"
     },
     {
+      description: "Update Just in GitHub Action workflows",
+      customType: "regex",
+      fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
+      matchStrings: [
+        "\
+just-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
+(\\s+|\\s+.*)"
+      ],
+      datasourceTemplate: "crate",
+      depNameTemplate: "just"
+    },
+    {
       description: "Update Python in GitHub Action workflows",
       customType: "regex",
       fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
