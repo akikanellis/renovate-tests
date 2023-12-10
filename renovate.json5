@@ -94,8 +94,7 @@ java-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
         "javaVersion\\s*=\\s*(\"|')?(?<currentValue>.+)(\"|')?(\\s+|\\s+.*)"
       ],
       datasourceTemplate: "java-version",
-      depNameTemplate: "java",
-      versioningTemplate: "semver-coerced"
+      depNameTemplate: "java"
     },
     {
       description: "Any other file with dependencies",
