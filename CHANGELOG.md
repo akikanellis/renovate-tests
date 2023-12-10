@@ -1,3 +1,12 @@
+## [1.0.14](https://github.com/akikanellis/renovate-tests/compare/v1.0.13...v1.0.14) (2023-12-10)
+
+
+### Build System
+
+* **deps:** update all docker digest dependencies ([#134](https://github.com/akikanellis/renovate-tests/issues/134)) ([cfc0256](https://github.com/akikanellis/renovate-tests/commit/cfc0256d6c3b3b1f45d73f37b369820e60bdefa7))
+* **deps:** update dependency java to v17 ([#135](https://github.com/akikanellis/renovate-tests/issues/135)) ([ab4a9ee](https://github.com/akikanellis/renovate-tests/commit/ab4a9ee8a82cab24c8a4aff6e94771fbe1ee0935))
+* **deps:** update dependency node to v20 ([#136](https://github.com/akikanellis/renovate-tests/issues/136)) ([db98ae6](https://github.com/akikanellis/renovate-tests/commit/db98ae62e9179482dcbc78ac39dbe25e956a4cc5))
+
 ## [1.0.13](https://github.com/akikanellis/renovate-tests/compare/v1.0.12...v1.0.13) (2023-12-10)
 
 
