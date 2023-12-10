@@ -27,8 +27,9 @@
       customType: "regex",
       fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
       matchStrings: [
-        "renovate-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
-        (\\s+|\\s+.*)"
+        "\
+renovate-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
+(\\s+|\\s+.*)"
       ],
       datasourceTemplate: "docker",
       depNameTemplate: "ghcr.io/renovatebot/renovate"
@@ -38,8 +39,9 @@
       customType: "regex",
       fileMatch: ["^\\.github\\/(actions|workflows)\\/.+\\.ya?ml$"],
       matchStrings: [
-        "python-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
-        (\\s+|\\s+.*)"
+        "\
+python-version\\s*:\\s*(\"|')?(?<currentValue>.+)(\"|')?\
+(\\s+|\\s+.*)"
       ],
       extractVersionTemplate: "^v(?<version>.+)",
       datasourceTemplate: "github-tags",
