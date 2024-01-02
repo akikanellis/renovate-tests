@@ -1,3 +1,10 @@
+## [1.0.39](https://github.com/akikanellis/renovate-tests/compare/v1.0.38...v1.0.39) (2024-01-02)
+
+
+### Build System
+
+* add new branch name validator ([d61ae15](https://github.com/akikanellis/renovate-tests/commit/d61ae1510eee396b1b9ebc7dc47455b708af5740))
+
 ## [1.0.38](https://github.com/akikanellis/renovate-tests/compare/v1.0.37...v1.0.38) (2023-12-10)
 
 
