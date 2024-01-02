@@ -36,6 +36,6 @@ jobs:
     steps:
       - name: Validate branch name
         # yamllint disable-line rule:line-length
-        uses: akikanellis/branch-name-validator-test@v1.5.84
+        uses: akikanellis/branch-name-validator-test@96d43e2ec6044845373c62414d444337e6610f7f # v1.5.85
         with:
           regex: ^[a-z]+([a-z0-9\.-])+$
